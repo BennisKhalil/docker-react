@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+VOLUME ["/host_mnt/d/Codes/docker-kubernetes-course/frontend:/app", "/app/node_modules"]
+
+CMD ["npm", "run", "start"]
