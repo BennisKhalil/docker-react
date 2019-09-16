@@ -6,6 +6,8 @@ COPY package.json .
 
 RUN npm install
 
+COPY . .
+
 VOLUME ["/host_mnt/d/Codes/docker-kubernetes-course/frontend:/app", "/app/node_modules"]
 
 CMD ["npm", "run", "start"]
