@@ -6,9 +6,6 @@ services:
 before_install:
   - docker build -t benniskhalil/docker-react -f Dockerfile.dev .
 
-script:
-  - docker run benniskhalil/docker-react npm run test --no-watch
-
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-3"
